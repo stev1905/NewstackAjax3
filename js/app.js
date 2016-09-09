@@ -30,7 +30,7 @@ var showQuestion = function(question) {
 
 	return result;
 };
-var getTopAnswer = function(answer) {
+var showTopAnswer = function(answer) {
 	
 	// clone our result template code
 	var result = $('.templates .answer').clone();
@@ -38,6 +38,16 @@ var getTopAnswer = function(answer) {
 	// Set the question properties in result
 	var name = result.find('.name');
 	name.text(answer.user.display_name);
+
+	var link = result.find('.link a');
+	link.attr('href', answer.user.link);
+	link.text(answer.user.link);
+
+	var reputation = result.find('.reputation');
+	reputation.text(answer.user.reputation);
+
+	var score = result.find('.score');
+	score.text(answer.user.score);
 
 	return result;
 };
@@ -115,7 +125,7 @@ var getTopAnswer = function(tags) {
 		//$.each is a higher order function. It takes an array and a function as an argument.
 		//The function is executed once for each item in the array.
 		$.each(result.items, function(i, item) {
-			var answer = getTopAnswer(item);
+			var answer = showTopAnswer(item);
 			$('.results').append(answer);
 
 			console.log(result);
