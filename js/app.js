@@ -40,7 +40,7 @@ var showTopAnswer = function(answer) {
 	name.text(answer.user.display_name);
 
 	var link = result.find('.link');
-	link.text(answer.link);
+	link.text(answer.user.link);
 
 	var reputation = result.find('.reputation');
 	reputation.text(answer.user.reputation);
