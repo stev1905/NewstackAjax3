@@ -39,7 +39,7 @@ var showTopAnswer = function(answer) {
 	var name = result.find('.name');
 	name.text(answer.user.display_name);
 
-	var link = result.find('.link');
+	var link = result.find('.link a');
 	link.attr('href', answer.user.link);
 	link.text(answer.user.link);
 
