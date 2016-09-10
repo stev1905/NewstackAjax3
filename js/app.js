@@ -94,14 +94,14 @@ var getUnanswered = function(tags) {
 			var question = showQuestion(item);
 			$('.results').append(question);
 
-			
 		});
+		console.log(result);
 	})
 	.fail(function(jqXHR, error){ //this waits for the ajax to return with an error promise object
 		var errorElem = showError(error);
 		$('.search-results').append(errorElem);
 	});
-	console.log(result);
+
 };
 
 var getTopAnswer = function(tags) {
@@ -128,15 +128,14 @@ var getTopAnswer = function(tags) {
 		$.each(result.items, function(i, item) {
 			var answer = showTopAnswer(item);
 			$('.results').append(answer);
-
 			
 		});
+		console.log(result);
 	})
 	.fail(function(jqXHR, error){ //this waits for the ajax to return with an error promise object
 		var errorElem = showError(error);
 		$('.search-results').append(errorElem);
 	});
-	console.log(result);
 };
 
 $(document).ready( function() {
