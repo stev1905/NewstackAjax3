@@ -47,7 +47,7 @@ var showTopAnswer = function(answer) {
 	reputation.text(answer.user.reputation);
 
 	var score = result.find('.score');
-	score.text(answer.user.score);
+	score.text(answer.score);
 
 	return result;
 };
@@ -130,7 +130,7 @@ var getTopAnswer = function(tags) {
 			$('.results').append(answer);
 			console.log(result);
 		});
-		
+
 	})
 	.fail(function(jqXHR, error){ //this waits for the ajax to return with an error promise object
 		var errorElem = showError(error);
