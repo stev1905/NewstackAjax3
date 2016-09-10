@@ -41,7 +41,7 @@ var showTopAnswer = function(answer) {
 
 	var link = result.find('.link a');
 	link.attr('href', answer.user.link);
-	link.text(answer.link);
+	link.text(answer.user.link);
 
 	var reputation = result.find('.reputation');
 	reputation.text(answer.user.reputation);
