@@ -128,9 +128,9 @@ var getTopAnswer = function(tags) {
 		$.each(result.items, function(i, item) {
 			var answer = showTopAnswer(item);
 			$('.results').append(answer);
-			
+			console.log(result);
 		});
-		console.log(result);
+		
 	})
 	.fail(function(jqXHR, error){ //this waits for the ajax to return with an error promise object
 		var errorElem = showError(error);
