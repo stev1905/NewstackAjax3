@@ -39,8 +39,8 @@ var showTopAnswer = function(answer) {
 	var name = result.find('.name');
 	name.text(answer.user.display_name);
 
-	var link = result.find('.link a');
-	link.text(answer.user.link);
+	var link = result.find('.link');
+	link.text(answer.link);
 
 	var reputation = result.find('.reputation');
 	reputation.text(answer.user.reputation);
